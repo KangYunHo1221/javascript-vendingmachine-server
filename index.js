@@ -1,4 +1,3 @@
-console.log('hi');
 const jsonServer = require('json-server');
 const auth = require('json-server-auth');
 const cors = require('cors');
@@ -18,7 +17,6 @@ const rules = auth.rewriter({
   '/posts/:category': '/posts?category=:category',
 });
 
-console.log('hi2');
 // You must apply the auth middleware before the router
 app.use(cors());
 app.use(rules);
